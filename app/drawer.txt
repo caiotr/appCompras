@@ -1,0 +1,66 @@
+import { Drawer } from "../Drawer";
+
+export default function RootLayout() {
+  return (
+    <Drawer>
+      <Drawer.Screen
+        name="index" // This is the name of the page and must match the url from root
+        options={{
+          drawerLabel: "Home",
+          title: "overview",
+        }}
+      />
+      <Drawer.Screen
+        name="telaA" // This is the name of the page and must match the url from root
+        options={{
+          drawerLabel: "Tela A",
+          title: "overview",
+        }}
+      />
+    <Drawer.Screen
+        name="telaB" // This is the name of the page and must match the url from root
+        options={{
+          drawerLabel: "Tela B",
+          title: "overview",
+        }}
+      />
+    </Drawer>
+  );
+}
+
+
+
+
+import { Tabs } from "expo-router";
+import React from "react";
+
+export default function AppLayout() {
+    return (
+        <Tabs>
+            <Tabs.Screen
+
+                name="home"
+                options={{
+
+                    href: "/",
+                }}
+            />
+            <Tabs.Screen
+
+                name="Tela A"
+                options={{
+
+                    href: "./TelaA",
+                }}
+            />
+            <Tabs.Screen
+
+                name="Tela B"
+                options={{
+
+                    href: "/",
+                }}
+            />
+        </Tabs>
+    );
+}
